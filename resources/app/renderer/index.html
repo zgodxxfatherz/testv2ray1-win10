@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' http://ip-api.com https://ipwho.is http://ip-api.com:* https://ipwho.is:*" />
+<title>TESTV2RAY1</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="stars"></div>
+<div class="scanlines"></div>
+
+<div class="frame">
+  <header class="bar">
+    <div class="brand"><span class="mark">T1</span><span class="brandtext">TESTV2RAY1</span></div>
+    <div class="status-cluster">
+      <span class="chip" id="chipCore">CORE <b>OFFLINE</b></span>
+      <span class="chip" id="chipProxy">SYSTEM PROXY <b>OFF</b></span>
+      <span class="chip" id="chipIp">IP <b>—</b></span>
+    </div>
+    <button class="hamburger" id="btnMenu" aria-label="Menu">≡</button>
+  </header>
+
+  <!-- Outside the grid on purpose. As a grid item it became an implicit row,
+       and the grid's extra vertical space was distributed into it, so a short
+       message stretched into a full-height red slab that pushed the app down. -->
+  <div class="notice" id="notice" hidden></div>
+
+  <main class="grid">
+    <section class="panel list-panel">
+      <div class="panel-head">
+        <h2>SERVER ARRAY</h2>
+        <div class="head-actions">
+          <button class="btn ghost" id="btnPingAll">PING ALL</button>
+          <button class="btn ghost" id="btnGeoAll">LOCATE</button>
+        </div>
+      </div>
+      <div class="toolbar">
+        <input id="txtLinks" class="input" placeholder="Paste vless:// vmess:// trojan:// ss:// links or a base64 subscription payload…" />
+        <button class="btn" id="btnImportText">IMPORT</button>
+        <button class="btn ghost" id="btnImportFile">FILE</button>
+        <button class="btn ghost" id="btnSub">SUB URL</button>
+      </div>
+      <div class="list" id="serverList"></div>
+      <div class="list-foot">
+        <span id="count">0 NODES</span>
+        <button class="btn danger ghost" id="btnClear">CLEAR ALL</button>
+      </div>
+    </section>
+
+    <section class="panel globe-panel">
+      <div class="globe-head">
+        <div class="title-block">
+          <h1 id="activeName">NO NODE SELECTED</h1>
+          <p class="subtitle" id="activeSub">Awaiting configuration data</p>
+        </div>
+        <div class="readout">
+          <div class="ro"><span>LATENCY</span><b id="roPing">—</b></div>
+          <div class="ro"><span>LOCATION</span><b id="roLoc">—</b></div>
+          <div class="ro"><span>PROTOCOL</span><b id="roProto">—</b></div>
+          <div class="ro"><span>ENDPOINT</span><b id="roHost">—</b></div>
+        </div>
+      </div>
+      <canvas id="globe"></canvas>
+      <div class="coords" id="coords">LAT — · LON — · NO SIGNAL</div>
+    </section>
+  </main>
+
+  <footer class="actionbar">
+    <div class="traffic" id="trafficBar"><span></span></div>
+    <button class="btn big" id="btnConnect">CONNECT</button>
+    <button class="btn ghost" id="btnCoreOnly">CORE ONLY</button>
+    <button class="btn ghost" id="btnLogs">LOGS</button>
+  </footer>
+</div>
+
+<div class="modal" id="logModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>CORE LOG</h3><button class="btn ghost" id="btnCloseLogs">CLOSE</button></div>
+    <pre id="logBody"></pre>
+  </div>
+</div>
+
+<div class="drawer" id="menuDrawer">
+  <h3>MENU</h3>
+  <button class="btn ghost wide" id="mPing">PING ALL NODES</button>
+  <button class="btn ghost wide" id="mGeo">RESOLVE ALL LOCATIONS</button>
+  <button class="btn ghost wide" id="mAuto">TOGGLE AUTO-SELECT BEST</button>
+  <button class="btn ghost wide" id="mAutoConnect">AUTO-CONNECT ON START: OFF</button>
+  <button class="btn ghost wide" id="mAutoWatch">WATCH & RECONNECT: OFF</button>
+  <button class="btn ghost wide" id="mRefreshIp">REFRESH PUBLIC IP</button>
+  <p class="hint">AUTO-CONNECT arms the tunnel as soon as the app opens. WATCH &amp; RECONNECT keeps it up: if the tunnel drops it silently switches to another node and retries. Both leave the system proxy OFF when no node actually works, so you can never be left without internet.</p>
+</div>
+
+<script src="countries.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

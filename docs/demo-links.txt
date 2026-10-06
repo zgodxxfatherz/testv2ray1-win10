@@ -1,0 +1,9 @@
+# Demo nodes for screenshots. These are placeholder credentials on real,
+# publicly resolvable hostnames so that geo lookup returns true locations.
+# Nothing here connects to anything: the ports and paths are not real.
+vless://11111111-2222-3333-4444-555555555555@one.one.one.one:8443?encryption=none&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=uzFTrr52mInUnWtw0S0MsGwRaiR2QAkesRmzhCLtGQY&sid=abcdef12&spx=%2F&type=tcp&flow=xtls-rprx-vision#Cloudflare-Reality
+vless://11111111-2222-3333-4444-555555555555@www.google.com:8443?encryption=none&security=tls&sni=www.google.com&type=ws&host=www.google.com&path=%2Fray#Google-WS
+vless://11111111-2222-3333-4444-555555555555@dns.google:8443?encryption=none&security=none&type=xhttp&path=%2Fstream#Google-XHTTP
+trojan://placeholder%21@www.microsoft.com:8443?sni=www.microsoft.com&type=grpc&serviceName=grpcsvc#Microsoft-gRPC
+trojan://placeholder%21@github.com:8443?sni=github.com&type=tcp#GitHub-TCP
+ss://YWVzLTI1Ni1nY206c2VrZXRwYXNz@one.one.one.one:8388#Cloudflare-SS

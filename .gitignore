@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# The app build output: the Electron runtime, the unpacked app and the xray
+# core are all large binaries that change on every rebuild. They are not source.
+TESTV2RAY1-WIN10.exe
+*.exe
+*.dll
+*.pak
+*.dat
+*.bin
+*.asar
+locales/
+resources.pak
+icudtl.dat
+snapshot_blob.bin
+v8_context_snapshot.bin
+vk_swiftshader*
+vulkan-1.dll
+ffmpeg.dll
+libEGL.dll
+libGLESv2.dll
+d3dcompiler_47.dll
+
+# Generated config and logs
+config.json
+*.log
+data/
+
+# Real credentials: never commit a share link or a node store
+store.json
+last.txt
+*.vless
+proxy-backup.json
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+# Local tooling / third-party blobs
+LICENSES.chromium.html
+gh-api.ps1
+version

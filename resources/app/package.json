@@ -1,0 +1,9 @@
+{
+  "name": "testv2ray1",
+  "productName": "TESTV2RAY1-WIN10",
+  "version": "1.0.0",
+  "description": "TESTV2RAY1 sci-fi xray client - Windows 10/11 build (Electron 31 + current Xray core)",
+  "main": "main.js",
+  "license": "MIT",
+  "private": true
+}
