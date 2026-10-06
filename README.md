@@ -1,6 +1,8 @@
-# TESTV2RAY1
+# TESTV2RAY1 — Sci-fi Xray Desktop Client for Windows 10 / 11
 
-Sci-fi xray desktop client for **Windows 10 / 11**.
+> **VLESS · VMess · Trojan · SS** — import any link, ping nodes on a real wireframe globe, then arm the system proxy. Built on **Electron 31 + Xray 26.3.27**. MIT licensed.
+
+Sci-fi Xray desktop client for **Windows 10 / 11**. Import VLESS (Reality + XTLS Vision), VMess, Trojan, and SS share links, watch them geolocate on a real wireframe globe, ping them, then arm the tunnel so every app on the machine goes through the one you picked.
 
 Import your servers, watch them light up on a real wireframe globe, ping them,
 then arm the tunnel so every app on the machine goes through the one you picked.
